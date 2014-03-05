@@ -1,0 +1,49 @@
+﻿@model ProgressBarMVC4.Models.FileUploadModel
+
+<link rel="stylesheet" href="@Url.Content("http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css")" />
+<meta name="viewport" content="width=device-width" />
+<link rel="stylesheet" href="@Url.Content("https://netdna.bootstrapcdn.com/bootswatch/3.0.0/flatly/bootstrap.min.css")" />
+
+
+<div class="container">
+    <div class="jumbotronx">
+        <h1>MVC Upload Progress Bar Demonstration</h1>
+        <p>C#, SignalR, and the OpenStack.NET SDK</p>
+    </div>
+    <form id="form1" runat="server" action="/Home/Index" method="post">
+
+        @Html.Hidden("username", Model.Username)
+        @Html.Hidden("apikey", Model.Apikey)
+        @Html.Hidden("pathtofile", Model.Pathtofile)
+        @Html.Hidden("containername", Model.Container)
+        @Html.Hidden("objectname", Model.Objectname)
+
+        <div id="pct" style="visibility: hidden;"></div>
+        <div class="ui-progressbar ui-widget ui-widget-content ui-corner-all">
+            <div id="progressbar"></div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/jquery-1.8.2.min.js")"
+    @Scripts.Render("~/Scripts/jquery-ui-1.10.4.min.js")
+    @Scripts.Render("~/Scripts/jquery.signalR-2.0.2.js")
+    @Scripts.Render("~/signalr/hubs")
+    @Scripts.Render("~/Scripts/SignalR.Create.ProgressBar.js")
+    @Scripts.Render("https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js")
+
+    <script>
+
+        $(function () {
+            $("#progressbar").progressbar({
+                value: 0
+            });
+        });
+
+        $("#pct").bind("DOMSubtreeModified", function () {
+            $("#progressbar").progressbar("value", parseInt($("#pct").text()));
+        });
+
+    </script>
+}
