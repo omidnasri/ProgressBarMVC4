@@ -33,5 +33,10 @@ namespace ProgressBarMVC4.Controllers
         {
             return View("UploadPrompt", new Models.FileUploadModel() );
         }
+
+        public ActionResult UploadPrompt2()
+        {
+            return View("UploadPrompt2", new Models.FileUploadModel() );
+        }
     }
 }

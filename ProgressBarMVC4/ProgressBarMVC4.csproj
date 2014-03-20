@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Lib.Web.Mvc">
+      <HintPath>..\..\..\..\Desktop\jquery.ui.progressbar\ReferenceAssemblies\Lib.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.Core">
       <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.0.2\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
     </Reference>
@@ -296,6 +299,7 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-ui-1.10.4.js" />
     <Content Include="Scripts\jquery-ui-1.10.4.min.js" />
+    <Content Include="Scripts\jquery.form.min.js" />
     <Content Include="Scripts\jquery.signalR-2.0.2.js" />
     <Content Include="Scripts\jquery.signalR-2.0.2.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
@@ -349,6 +353,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home\UploadPrompt.cshtml" />
     <Content Include="Views\FileUpload\Create.cshtml" />
+    <Content Include="Views\Home\UploadPrompt2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />

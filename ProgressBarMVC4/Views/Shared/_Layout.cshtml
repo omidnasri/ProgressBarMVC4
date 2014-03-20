@@ -24,6 +24,7 @@
                             <li>@Html.ActionLink("About", "About", "Home")</li>
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                             <li>@Html.ActionLink("Upload", "UploadPrompt", "Home")</li>
+                            <li>@Html.ActionLink("Streaming upload", "UploadPrompt2", "Home")</li>
                         </ul>
                     </nav>
                 </div>
@@ -45,5 +46,6 @@
 
         @Scripts.Render("~/bundles/jquery")
         @RenderSection("scripts", required: false)
+        @RenderSection("Javascript", required: false)
     </body>
 </html>

@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Globalization;
 using System.Web.Security;
+using System.Web;
 
 namespace ProgressBarMVC4.Models
 {
@@ -27,8 +28,8 @@ namespace ProgressBarMVC4.Models
 
         [Required]
         [Display(Name = "Path to File", Prompt = "Path to File")]
-        [DataType(DataType.Text)]
-        public string Pathtofile { get; set; }
+        [DataType(DataType.Upload)]
+        public HttpPostedFileWrapper Pathtofile { get; set; }
 
         [Required]
         [Display(Name = "Object Name", Prompt = "Object Name")]
