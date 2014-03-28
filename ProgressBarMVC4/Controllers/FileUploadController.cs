@@ -82,8 +82,6 @@ namespace ProgressBarMVC4.Controllers
                 {
                     cfp.CreateObject(containerName, stream, objectName, progressUpdated: updateProgress);
 
-//                    cfp.CreateObject(containerName, stream, objectName);
-
                 }
 
 
