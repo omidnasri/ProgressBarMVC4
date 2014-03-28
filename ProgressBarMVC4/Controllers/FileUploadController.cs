@@ -11,7 +11,7 @@ using net.openstack.Core.Domain;
 using net.openstack.Core.Providers;
 using Microsoft.AspNet.SignalR;
 using ProgressBarMVC4;
-using Lib.Web.Mvc;
+//using Lib.Web.Mvc;
 
 namespace ProgressBarMVC4.Controllers
 {
@@ -200,8 +200,8 @@ namespace ProgressBarMVC4.Controllers
             session["OPERATION_PROGRESS"] = (((bytesSent * 100) / filesize).ToString());
 
         }
-        
-        [NoCache]
+      
+
         public ActionResult OperationProgress()
         {
             int operationProgress = 0;
