@@ -160,38 +160,24 @@ namespace ProgressBarMVC4.Controllers
         {
             HttpSessionStateBase session = Session;
 
-            //Separate thread for long running operation
-//            ThreadPool.QueueUserWorkItem(delegate
-//            {
-                var file = viewModel.Pathtofile;
-                var username = viewModel.Username;
-                var apiKey = viewModel.Apikey;
-                var containerName = viewModel.Container;
-                var objectName = viewModel.Objectname;
+            var file = viewModel.Pathtofile;
+            var username = viewModel.Username;
+            var apiKey = viewModel.Apikey;
+            var containerName = viewModel.Container;
+            var objectName = viewModel.Objectname;
 
-                CloudIdentity cid = new CloudIdentity() { Username = username, APIKey = apiKey };
-                CloudFilesProvider cfp = new CloudFilesProvider(cid);
+            CloudIdentity cid = new CloudIdentity() { Username = username, APIKey = apiKey };
+            CloudFilesProvider cfp = new CloudFilesProvider(cid);
 
-                filesize = file.ContentLength;
+            filesize = file.ContentLength;
 
 
-                using (var stream = file.InputStream)
-                {
-                    cfp.CreateObject(containerName,stream,objectName,progressUpdated:updateProgress);
-                }
+            using (var stream = file.InputStream)
+            {
+                cfp.CreateObject(containerName, stream, objectName, progressUpdated: updateProgress);
+            }
 
-                
-                //int operationProgress;
-                //for (operationProgress = 0; operationProgress <= 100; operationProgress = operationProgress + 2)
-                //{
-                //    session["OPERATION_PROGRESS"] = operationProgress;
-                //    Thread.Sleep(1000);
-                //}
- //           });
-
-                return RedirectToAction("Index", "Home");
-
-//            return Json(new { progress = 0 });
+            return RedirectToAction("Index", "Home");
         }
 
         private void updateProgress(long bytesSent)
@@ -200,7 +186,7 @@ namespace ProgressBarMVC4.Controllers
             session["OPERATION_PROGRESS"] = (((bytesSent * 100) / filesize).ToString());
 
         }
-      
+
 
         public ActionResult OperationProgress()
         {
