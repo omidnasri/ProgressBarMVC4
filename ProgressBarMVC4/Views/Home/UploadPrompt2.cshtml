@@ -58,17 +58,13 @@
         </div>
 
         <p>
-            <input type="submit" value="Upload" />
+            <input type="submit" value="Upload" onclick="$('#progressbar').show();"/>
         </p>
     </fieldset>
 
     <div id="progressbar" style="width: 500px;"></div>
 
 }
-
-<div>
-    @Html.ActionLink("Back", "Index")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
@@ -100,8 +96,8 @@
         $(document).ready(function () {
             //Progressbar initialization
             try {
+                $("#progressbar").hide();
                 $("#progressbar").progressbar({ value: 0 });
-
                 $('#uploadForm').ajaxForm({
                     uploadProgress: function (event, position, total, percentComplete) {
                         $("#progressbar").progressbar({ value: percentComplete });
