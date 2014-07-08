@@ -14,6 +14,6 @@ In the specific case where a large object is being uploaded to a Cloud Container
 
 Using this Action, we can use SignalR to call a function on the client to update the progress. In our example, we simply send the percentage completed.
 
-Finally, that information is used as the value for the jQuery Progress Bar UI widget. By binding a function to the event "DOMSubtreeModified" for the <div> containing the percentage value, we are able to dynamically update the progress bar.
+Finally, that information is used as the value for the jQuery Progress Bar UI widget. By binding a function to the event "DOMSubtreeModified" for the <div\> containing the percentage value, we are able to dynamically update the progress bar.
 
-### END ###
+\### END \###
