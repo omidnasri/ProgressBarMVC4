@@ -1,6 +1,7 @@
 MVC4 example of using SignalR with the OpenStack.NET file upload to display a progress bar on a web client
 
 March 5, 2014
+README udpated July 8, 2014
 
 During lengthy operations, it is a best practice to keep the user updated as to the progress of the operation. In the example of file uploads, a progress bar is a good graphical representation.
 
