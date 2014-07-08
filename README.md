@@ -1,3 +1,4 @@
+# About
 MVC4 example of using SignalR with the OpenStack.NET file upload to display a progress bar on a web client
 
 March 5, 2014
