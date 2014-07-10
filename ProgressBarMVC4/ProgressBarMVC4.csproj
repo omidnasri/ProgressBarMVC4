@@ -215,9 +215,17 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AutoScaleController.cs" />
+    <Compile Include="Controllers\BlockStorageController.cs" />
+    <Compile Include="Controllers\ComputeController.cs" />
+    <Compile Include="Controllers\DatabaseController.cs" />
+    <Compile Include="Controllers\DNSController.cs" />
     <Compile Include="Controllers\FileUploadController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IdentityController.cs" />
+    <Compile Include="Controllers\LoadBalancerController.cs" />
+    <Compile Include="Controllers\MonitoringController.cs" />
+    <Compile Include="Controllers\ObjectStoreController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -357,6 +365,14 @@
     <Content Include="Views\FileUpload\Create.cshtml" />
     <Content Include="Views\Home\UploadPrompt2.cshtml" />
     <Content Include="Views\Identity\Index.cshtml" />
+    <Content Include="Views\AutoScale\Index.cshtml" />
+    <Content Include="Views\BlockStorage\Index.cshtml" />
+    <Content Include="Views\ObjectStore\Index.cshtml" />
+    <Content Include="Views\Monitoring\Index.cshtml" />
+    <Content Include="Views\LoadBalancer\Index.cshtml" />
+    <Content Include="Views\DNS\Index.cshtml" />
+    <Content Include="Views\Database\Index.cshtml" />
+    <Content Include="Views\Compute\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />
