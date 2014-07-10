@@ -3,8 +3,12 @@
 }
 
 <h2>Identity</h2>
-<p>Username</p>
-<p>@Html.TextBox("Username")</p>
-<p>APIKey</p>
-<p>@Html.TextBox("APIKey")</p>
-<p>@Html.Action("Authenticate")</p>
+<h3>@ViewBag.LastOperation</h3>
+@using (Html.BeginForm("Authenticate","Identity"))
+{
+    <p>Username</p>
+    <p>@Html.TextBox("Username")</p>
+    <p>APIKey</p>
+    <p>@Html.TextBox("APIKey")</p>
+    <p><input type="submit" name="Submit" value="Authenticate" /></p>
+}
