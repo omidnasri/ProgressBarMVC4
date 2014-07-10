@@ -1,5 +1,10 @@
 ﻿@{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Identity";
 }
 
-<h2>Index</h2>
+<h2>Identity</h2>
+<p>Username</p>
+<p>@Html.TextBox("Username")</p>
+<p>APIKey</p>
+<p>@Html.TextBox("APIKey")</p>
+<p>@Html.Action("Authenticate")</p>

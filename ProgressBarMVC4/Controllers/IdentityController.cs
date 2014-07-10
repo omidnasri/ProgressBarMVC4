@@ -16,5 +16,9 @@ namespace ProgressBarMVC4.Controllers
             return View();
         }
 
+        public ActionResult Authenticate(string username, string apikey)
+        {
+            return View("Index");
+        }
     }
 }
