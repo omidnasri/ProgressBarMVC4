@@ -1,5 +1,17 @@
 ﻿@{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Compute";
 }
 
-<h2>Index</h2>
+<h2>Compute</h2>
+<h3>@ViewBag.LastOperation</h3>
+
+@using (Html.BeginForm("ListFlavorsInit","Compute"))
+{
+    <p><input type="submit" name="Submit" value="List Flavors" /></p>
+}
+
+@using (Html.BeginForm("ListImagesInit","Compute"))
+{
+    <p><input type="submit" name="Submit" value="List Images" /></p>
+}
+

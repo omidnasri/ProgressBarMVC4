@@ -16,5 +16,14 @@ namespace ProgressBarMVC4.Controllers
             return View();
         }
 
+        public ActionResult ListFlavorsInit()
+        {
+            return View();
+        }
+
+        public ActionResult ListImagesInit()
+        {
+            return View();
+        }
     }
 }
