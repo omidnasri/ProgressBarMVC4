@@ -5,13 +5,36 @@
 <h2>Compute</h2>
 <h3>@ViewBag.LastOperation</h3>
 
-@using (Html.BeginForm("ListFlavorsInit","Compute"))
+@using (Html.BeginForm("ListFlavorsInit", "Compute"))
 {
-    <p><input type="submit" name="Submit" value="List Flavors" /></p>
+    <p>
+        <input type="submit" name="Submit" value="List Flavors" />
+    </p>
 }
 
-@using (Html.BeginForm("ListImagesInit","Compute"))
+@using (Html.BeginForm("ListImagesInit", "Compute"))
 {
-    <p><input type="submit" name="Submit" value="List Images" /></p>
+    <p>
+        <input type="submit" name="Submit" value="List Images" />
+    </p>
 }
 
+@if (ViewBag.Flavors != null)
+{
+    var grid = new WebGrid(ViewBag.Flavors);
+     @grid.GetHtml();  
+}
+else
+{
+    <p>No Flavors listed</p>
+}
+
+@if (ViewBag.Images != null)
+{
+    var grid = new WebGrid(ViewBag.Images);
+     @grid.GetHtml();  
+}
+else
+{
+    <p>No Images listed</p>
+}

@@ -21,10 +21,12 @@ namespace ProgressBarMVC4.Controllers
         [HttpPost, ValidateInput(false)]
         public ActionResult Authenticate(FormCollection formCollection)
         {
+            Session["apikey"] = formCollection["apikey"];
+            Session["username"] = formCollection["username"];
             CloudIdentity cloudIdentity = new CloudIdentity()
             {
-                APIKey = formCollection["apikey"],
-                Username = formCollection["username"]
+                APIKey = Session["apikey"].ToString(),
+                Username = Session["username"].ToString()
             };
             try
             {
